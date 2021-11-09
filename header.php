@@ -1,4 +1,14 @@
-  <div class="header">
+<?php
+
+session_start();
+  
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+<div class="header">
            
 <img src="https://hrlab.de/wp-content/uploads/2020/11/hrlab-logo-square.jpg" alt="Mutasem" style="width:128px;height:128px; float: right; ">
 
