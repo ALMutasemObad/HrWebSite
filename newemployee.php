@@ -196,7 +196,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              
              
 
-             Required>
+             disabled readonly>
     </div>
   </div>
   <div class="row">
@@ -204,7 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">First Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="firstname" name="firstname" placeholder="enter the employee First name.." autofocus Required>
+      <input type="text" id="firstname" name="firstname" placeholder="enter the employee First name.." autofocus>
     </div>
   </div>
   <div class="row">
@@ -212,7 +212,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lastname" name="lastname" placeholder="enter the employee last name.." Required>
+      <input type="text" id="lastname" name="lastname" placeholder="enter the employee last name..">
     </div>
   </div>
   <div class="row">
@@ -232,7 +232,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">Salary</label>
     </div>
     <div class="col-75">
-      <input type="number" id="salary" name="salary" placeholder="Enter the salary amount.." Required>
+      <input type="number" id="salary" name="salary" placeholder="Enter the salary amount..">
     </div>
   </div>
       <div class="row">
@@ -240,7 +240,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">Join Date</label>
     </div>
     <div class="col-75">
-      <input type="datetime-local" id="JoinDate" name="JoinDate" VALUE="" placeholder="Enter the date the employee joined your company.." Required>
+      <input type="datetime-local" id="JoinDate" name="JoinDate" placeholder="Enter the date the employee joined your company..">
     </div>
   </div>
        <div class="row">
