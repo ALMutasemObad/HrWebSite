@@ -1,5 +1,16 @@
 <?php require_once "config.php";
 
+<<<<<<< Updated upstream
+
+
+ $sql = "INSERT INTO attendance(empID, date, logType) VALUES ( ?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+             $param_id= $_GET["id"];
+            $param_firstname=$_GET["type"];
+            $param_lastname=date("Y/m/d");
+=======
 if ($_GET["type"]==1){
 
  $sql = "INSERT INTO attendance(empID, date, time, logType) VALUES ( ?, current_date(),CURRENT_TIME(), 1)";
@@ -35,28 +46,43 @@ else if ($_GET["type"]==2){
          
         if($stmt = mysqli_prepare($link, $sql)){
             
+>>>>>>> Stashed changes
             
       
             
             
+<<<<<<< Updated upstream
+            mysqli_stmt_bind_param($stmt, "sss", $param_id, $param_firstname, $param_lastname);
+            
+            $param_id= $_GET["id"];
+            $param_firstname= date("Y/m/d");
+            $param_lastname=$_GET["type"];
+=======
             mysqli_stmt_bind_param($stmt, "s", $param_id);
             
             $param_id= $_GET["id"];
            
           
+>>>>>>> Stashed changes
            
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
                 header("location:attendance.php");
+<<<<<<< Updated upstream
+=======
                
+>>>>>>> Stashed changes
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
               mysqli_stmt_close($stmt);
         }
 
+<<<<<<< Updated upstream
+
+=======
 }
 else if ($_GET["type"]==3){
 
@@ -89,6 +115,7 @@ else if ($_GET["type"]==3){
         }
 
 }
+>>>>>>> Stashed changes
 
 
 

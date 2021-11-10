@@ -23,6 +23,32 @@ if ($result->num_rows > 0) {
     
 
 
+<<<<<<< Updated upstream
+ $sql = "SELECT  empID FROM attendance WHERE logType= ? and date=? and empID=?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "sss",$logType,$paramDate,$pramId );
+            
+            // Set parameters
+            $logType=1;
+           $pramId= $row["id"];
+            $paramDate =  date("Y/m/d");
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) ==0 ){
+         echo ' <a href="attandanceF.php?id='. $row["id"].'&type=1" style="background-color: #008CBA;"  class="button">presence </a></td> <td> ';
+                } else{
+                   echo ' <a href="attandanceF.php?id='. $row["id"].'&type=1" style="background-color: #00ff00;"  class="button">Present </a></td> <td> ';
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+=======
  $sql2 = "SELECT empID, time FROM attendance WHERE logType=1 and date= current_date() and empID=".$row["id"];
         
         $result2 = $link->query($sql2);
@@ -36,11 +62,17 @@ if ($result2->num_rows ==0) {
                 }else{
                 echo "Oops! Something went wrong. Please try again later.";
             
+>>>>>>> Stashed changes
 
             // Close statement
             mysqli_stmt_close($stmt);
         }
 
+<<<<<<< Updated upstream
+   
+
+    echo ' <a href="attandanceF.php?id='. $row["id"].'&type=2" style="background-color: #7c4b15cf;"   class="button">leave  </a></td>  </tr>';
+=======
    $sql3 = "SELECT empID, time FROM attendance WHERE logType=2 and date= current_date() and empID=".$row["id"];
         
         $result3 = $link->query($sql3);
@@ -59,6 +91,7 @@ if ($result3->num_rows ==0) {
             // Close statement
             mysqli_stmt_close($stmt);
         }
+>>>>>>> Stashed changes
   
    $MaxID= $row["id"]+1;      
     }
