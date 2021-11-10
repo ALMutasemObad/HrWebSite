@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< Updated upstream
--- Generation Time: 08 نوفمبر 2021 الساعة 21:31
-=======
--- Generation Time: 10 نوفمبر 2021 الساعة 20:31
->>>>>>> Stashed changes
+-- Generation Time: 10 نوفمبر 2021 الساعة 20:48
 -- إصدار الخادم: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -83,13 +79,9 @@ INSERT INTO `employee` (`id`, `firstname`, `lastname`, `Role`, `salary`, `JoinDa
 (2, 'amr', 'atef', '', 134000, NULL, NULL),
 (3, 'motasmw', 'OBAD', '', 0, '0000-00-00', NULL),
 (4, 'sfsdf', 'wqrwer', '', 0, '0000-00-00', NULL),
-<<<<<<< Updated upstream
-(5, 'kahled', 'mohemmed', 'admin', 23424, '2021-10-30', NULL);
-=======
 (5, 'kahled', 'mohemmed', 'admin', 23424, '2021-10-30', NULL),
 (6, 'jsdfa', 'asdf', 'admin', 2352, '2021-11-06', NULL),
 (7, 'asama', 'alafary', 'admin', 100000, '2021-11-10', NULL);
->>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -145,11 +137,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-<<<<<<< Updated upstream
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
->>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `users`

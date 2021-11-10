@@ -149,14 +149,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 header("location: employees.php");
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops1 Something went wrong. Please try again later.";
                
             }
+            echo "Oops2 Something went wrong. Please try again later.";
 
             // Close statement
             mysqli_stmt_close($stmt);
         }
+        echo "Oops3 Something went wrong. Please try again later.";
     }
+    echo "Oops4 Something went wrong. Please try again later.";
     
     // Close connection
     mysqli_close($link);
