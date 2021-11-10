@@ -9,7 +9,7 @@
         
         <br><br><br><br><br><br>
     <?php
-require_once "config.php";
+
 
 $sql = "SELECT id, firstname, lastname , salary FROM employee";
 $result = $link->query($sql);
@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 $link->close();
 ?>
     <div style="float:right;">  
-        <a class="button"  <?php  echo 'href="newemployee.php?id='.$MaxID.'"'; ?>>Add New Employee</a></div>
+        <a class="button"  <?php   echo 'href="newemployee.php?maxid='.$MaxID.'"'; ?>>Add New Employee</a></div>
     
     </div>
     
