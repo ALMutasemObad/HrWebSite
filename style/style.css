@@ -77,7 +77,11 @@ img {
   margin: 4px 2px;
   cursor: pointer;
 }
-.buttonBlue {background-color: #008CBA;}
+.buttonBlue {background-color: #008CBA;
+
+
+
+}
 .buttonRed {background-color: #f44336;} 
 .buttoncolor {background-color: #e7e7e7; color: black;}
 .buttonBlack {background-color: #555555;} 
