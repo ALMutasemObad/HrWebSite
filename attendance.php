@@ -23,6 +23,7 @@ if ($result->num_rows > 0) {
     
 
 
+<<<<<<< Updated upstream
  $sql = "SELECT  empID FROM attendance WHERE logType= ? and date=? and empID=?";
         
         if($stmt = mysqli_prepare($link, $sql)){
@@ -47,14 +48,50 @@ if ($result->num_rows > 0) {
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
+=======
+ $sql2 = "SELECT empID, time FROM attendance WHERE logType=1 and date= current_date() and empID=".$row["id"];
+        
+        $result2 = $link->query($sql2);
+
+if ($result2->num_rows ==0) {
+         echo ' <a href="attandanceF.php?id='. $row["id"].'&type=1" style="background-color: #008CBA;"  class="button">presence </a></td> <td> ';
+                } 
+      else if ($result2->num_rows >0){  while($row1 = $result2->fetch_assoc()) {                   
+                   echo ' <a  href="attandanceF.php?id='. $row["id"].'&type=3 &logtype=1" style="background-color: #00ff00;"  class="button">Present at '.$row1["time"].' </a></td> <td> ';
+      }
+                }else{
+                echo "Oops! Something went wrong. Please try again later.";
+            
+>>>>>>> Stashed changes
 
             // Close statement
             mysqli_stmt_close($stmt);
         }
 
+<<<<<<< Updated upstream
    
 
     echo ' <a href="attandanceF.php?id='. $row["id"].'&type=2" style="background-color: #7c4b15cf;"   class="button">leave  </a></td>  </tr>';
+=======
+   $sql3 = "SELECT empID, time FROM attendance WHERE logType=2 and date= current_date() and empID=".$row["id"];
+        
+        $result3 = $link->query($sql3);
+
+if ($result3->num_rows ==0) {
+
+    echo ' <a href="attandanceF.php?id='. $row["id"].'&type=2" style="background-color: #7c4b15cf;"   class="button">leave  </a></td>  </tr>';
+     } 
+      else if ($result3->num_rows >0){  while($row3 = $result3->fetch_assoc()) {                   
+                   echo ' <a  href="attandanceF.php?id='. $row["id"].'&type=3 &logtype=2" style="background-color: #EECD15;"  class="button">left at '.$row3["time"].' </a></td> <td> ';
+      }
+                }else{
+                echo "Oops! Something went wrong. Please try again later.";
+            
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+>>>>>>> Stashed changes
   
    $MaxID= $row["id"]+1;      
     }

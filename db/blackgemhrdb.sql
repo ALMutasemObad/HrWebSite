@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< Updated upstream
 -- Generation Time: 08 نوفمبر 2021 الساعة 21:31
+=======
+-- Generation Time: 10 نوفمبر 2021 الساعة 20:31
+>>>>>>> Stashed changes
 -- إصدار الخادم: 10.4.20-MariaDB
 -- PHP Version: 8.0.8
 
@@ -20,6 +24,39 @@ SET time_zone = "+00:00";
 --
 -- Database: `blackgemhrdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- بنية الجدول `attendance`
+--
+
+CREATE TABLE `attendance` (
+  `empID` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `logType` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- إرجاع أو استيراد بيانات الجدول `attendance`
+--
+
+INSERT INTO `attendance` (`empID`, `date`, `time`, `logType`) VALUES
+(1, '2021-11-10', '22:29:28', 1),
+(1, '2021-11-10', '21:31:27', 2),
+(2, '2021-11-10', '21:21:31', 1),
+(2, '2021-11-10', '21:31:28', 2),
+(3, '2021-11-10', '21:21:17', 1),
+(3, '2021-11-10', '21:31:29', 2),
+(4, '2021-11-10', '21:21:18', 1),
+(4, '2021-11-10', '21:31:30', 2),
+(5, '2021-11-10', '21:21:33', 1),
+(5, '2021-11-10', '21:31:30', 2),
+(6, '2021-11-10', '21:21:35', 1),
+(6, '2021-11-10', '21:31:32', 2),
+(7, '2021-11-10', '21:21:36', 1),
+(7, '2021-11-10', '21:31:33', 2);
 
 -- --------------------------------------------------------
 
@@ -46,7 +83,13 @@ INSERT INTO `employee` (`id`, `firstname`, `lastname`, `Role`, `salary`, `JoinDa
 (2, 'amr', 'atef', '', 134000, NULL, NULL),
 (3, 'motasmw', 'OBAD', '', 0, '0000-00-00', NULL),
 (4, 'sfsdf', 'wqrwer', '', 0, '0000-00-00', NULL),
+<<<<<<< Updated upstream
 (5, 'kahled', 'mohemmed', 'admin', 23424, '2021-10-30', NULL);
+=======
+(5, 'kahled', 'mohemmed', 'admin', 23424, '2021-10-30', NULL),
+(6, 'jsdfa', 'asdf', 'admin', 2352, '2021-11-06', NULL),
+(7, 'asama', 'alafary', 'admin', 100000, '2021-11-10', NULL);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -76,6 +119,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
 --
 
 --
+-- Indexes for table `attendance`
+--
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`empID`,`date`,`logType`);
+
+--
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
@@ -96,7 +145,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
+<<<<<<< Updated upstream
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+=======
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -150,6 +150,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 header("location: employees.php");
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
+<<<<<<< Updated upstream
+=======
+               
+>>>>>>> Stashed changes
             }
 
             // Close statement
@@ -188,6 +192,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <input type="text" id="id" name="id" 
              <?php
              if(!empty( $_GET['maxid']))
+<<<<<<< Updated upstream
              echo "value= " . $_GET['maxid'];
              
              
@@ -197,6 +202,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              
 
              disabled readonly>
+=======
+             echo "value= " . $_GET['maxid'];   
+             ?>   Required>
+>>>>>>> Stashed changes
     </div>
   </div>
   <div class="row">
@@ -204,7 +213,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">First Name</label>
     </div>
     <div class="col-75">
+<<<<<<< Updated upstream
       <input type="text" id="firstname" name="firstname" placeholder="enter the employee First name.." autofocus>
+=======
+      <input type="text" id="firstname" name="firstname" placeholder="enter the employee First name.." autofocus Required>
+>>>>>>> Stashed changes
     </div>
   </div>
   <div class="row">
@@ -212,7 +225,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
+<<<<<<< Updated upstream
       <input type="text" id="lastname" name="lastname" placeholder="enter the employee last name..">
+=======
+      <input type="text" id="lastname" name="lastname" placeholder="enter the employee last name.." Required>
+>>>>>>> Stashed changes
     </div>
   </div>
   <div class="row">
@@ -232,7 +249,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">Salary</label>
     </div>
     <div class="col-75">
+<<<<<<< Updated upstream
       <input type="number" id="salary" name="salary" placeholder="Enter the salary amount..">
+=======
+      <input type="number" id="salary" name="salary" placeholder="Enter the salary amount.." Required>
+>>>>>>> Stashed changes
     </div>
   </div>
       <div class="row">
@@ -240,7 +261,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <label for="fname">Join Date</label>
     </div>
     <div class="col-75">
+<<<<<<< Updated upstream
       <input type="datetime-local" id="JoinDate" name="JoinDate" placeholder="Enter the date the employee joined your company..">
+=======
+      <input type="datetime-local" id="JoinDate" name="JoinDate" VALUE="" placeholder="Enter the date the employee joined your company.." Required>
+>>>>>>> Stashed changes
     </div>
   </div>
        <div class="row">
